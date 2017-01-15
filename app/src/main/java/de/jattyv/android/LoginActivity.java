@@ -3,6 +3,7 @@ package de.jattyv.android;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
@@ -29,10 +30,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import de.jattyv.jcapi.client.Chat;
 import de.jattyv.jcapi.client.gui.JGui;
 import de.jattyv.jcapi.client.handler.Handler;
 import de.jattyv.jcapi.client.network.Client;
@@ -40,11 +43,10 @@ import de.jattyv.jcapi.util.Packer;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity implements JGui{
 
 
-    private Handler handler;
-    private Client cl;
+    private static Chat chat;
     private EditText tUserName;
     private EditText tPassword;
     private String uname;
@@ -59,24 +61,19 @@ public class LoginActivity extends AppCompatActivity{
         setContentView(R.layout.activity_login);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        handler = new Handler();
-        cl  = new Client("192.168.0.103", 36987);
-        cl.setHandler(handler);
-        handler.setClient(cl);
+        chat = new Chat("192.168.0.103", 36987);
+        chat.setGui(this);
+
     }
 
     public void login(View v){
         getText();
-        handler.start(Packer.packLogin(uname, upassword));
+        chat.getHandler().getOutHandler().sendLogin(uname,upassword);
 
     }
     public void regist(View v) {
         getText();
-        try {
-            handler.start(Packer.packRegistration(uname, upassword));
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        chat.getHandler().getOutHandler().sendRegist(uname,upassword);
 
     }
 
@@ -87,5 +84,26 @@ public class LoginActivity extends AppCompatActivity{
         upassword = tPassword.getText().toString();
     }
 
+    public static Chat getChat(){
+        return chat;
+    }
+
+    @Override
+    public void changeWindow(String s) {
+        if(s.equals(JGui.CHAT_WINDOW)){
+            Intent intent = new Intent(LoginActivity.this, ChatSelectionActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void showError(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void addMessage(String s, String s1) {
+
+    }
 }
 
