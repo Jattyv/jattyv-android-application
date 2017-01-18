@@ -37,21 +37,9 @@ public class ChatActivity extends ListActivity implements JGui{
                 messages);
         setListAdapter(adapter);
         inputEdit = (EditText) findViewById(R.id.input_message);
-        inputEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if(event != null) {
-                    String a = "" + event.getKeyCode();
-                }
-                if (event != null&& (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-                    InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
-                    return true;
-
-                }
-                return false;
-            }
-        });
+        for(String message : chat.getHandler().getMessages(fname)){
+            addMessage(fname, message);
+        }
     }
 
     public void send(View view){
