@@ -4,7 +4,7 @@
     <item
         jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/libs/jcapi-0.1-SNAPSHOT.jar"
         revision="25.0.2"
-        sha1="70050bbc2edad035bc14f2ea676eb86acea55558">
+        sha1="a994dc44e65ce09804da1261748e66f8ed69e17d">
         <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/jcapi-0.1-SNAPSHOT-bfd1be77e48a6eaeea26851a3ea73f263cc1e978.jar" />
     </item>
     <item
@@ -66,6 +66,12 @@
         revision="25.0.2"
         sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
         <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a6f855876ce381730ac9f357b2ed1fd0468f1cb8.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/libs/jsapi-0.1-SNAPSHOT.jar"
+        revision="25.0.2"
+        sha1="eb5bd0b7b8fb5385dbe9b5106709204c965b340b">
+        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/jsapi-0.1-SNAPSHOT-415db9ab8c16e08d9f98f67c99396c556c5f01ea.jar" />
     </item>
     <item
         jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"

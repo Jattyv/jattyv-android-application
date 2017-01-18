@@ -8,5 +8,10 @@
     <string name="action_sign_in">Sign in</string>
     <string name="action_regist">Regist</string>
     <string name="title_activity_chat_selection">ChatSelectionActivity</string>
+    <string name="settings">Jattyv Settings</string>
+    <string name="setting_ip">IP</string>
+    <string name="setting_port">Port</string>
+    <string name="savebtn">SAVE</string>
+    <string name="sendbtn">-></string>
 
 </resources>

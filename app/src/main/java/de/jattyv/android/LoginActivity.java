@@ -1,47 +1,26 @@
 package de.jattyv.android;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.annotation.TargetApi;
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.StrictMode;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.app.LoaderManager.LoaderCallbacks;
-
-import android.content.CursorLoader;
-import android.content.Loader;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.AsyncTask;
-
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.text.TextUtils;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Properties;
 
+import de.jattyv.android.data.ConfigFileHandler;
 import de.jattyv.jcapi.client.Chat;
 import de.jattyv.jcapi.client.gui.JGui;
-import de.jattyv.jcapi.client.handler.Handler;
-import de.jattyv.jcapi.client.network.Client;
-import de.jattyv.jcapi.util.Packer;
-
-import static android.Manifest.permission.READ_CONTACTS;
+import de.jattyv.jcapi.data.jfc.JattyvFileController;
+import de.jattyv.jcapi.data.jfc.data.Settings;
+import de.jattyv.jsapi.ChatServer;
 
 public class LoginActivity extends AppCompatActivity implements JGui{
 
@@ -51,6 +30,9 @@ public class LoginActivity extends AppCompatActivity implements JGui{
     private EditText tPassword;
     private String uname;
     private String upassword;
+    public static Context context;
+
+    private final static int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 36;
 
     public LoginActivity() {
     }
@@ -61,9 +43,24 @@ public class LoginActivity extends AppCompatActivity implements JGui{
         setContentView(R.layout.activity_login);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        chat = new Chat("192.168.0.103", 36987);
-        chat.setGui(this);
+        if (ContextCompat.checkSelfPermission(LoginActivity.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(LoginActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+        }
+        context = getApplicationContext();
+        Settings  settings = new ConfigFileHandler().readSettings(JattyvFileController.J_PROP_FILE);
 
+        if(settings != null && settings.isIpAvailable() && settings.isPortAvailable()) {
+            ChatServer server = new ChatServer(settings);
+            server.start();
+            chat = new Chat(settings);
+        }else{
+            ChatServer server = new ChatServer(36987);
+            server.start();
+            chat = new Chat("127.0.0.1", 36987);
+        }
+        chat.setGui(this);
     }
 
     public void login(View v){
@@ -96,9 +93,18 @@ public class LoginActivity extends AppCompatActivity implements JGui{
         }
     }
 
+    public void openSettings(View view){
+        Intent intent = new Intent(LoginActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void showError(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+        this.runOnUiThread(new Runnable() {
+            public void run() {
+                Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
