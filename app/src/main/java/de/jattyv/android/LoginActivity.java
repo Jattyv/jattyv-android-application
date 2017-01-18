@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity implements JGui{
     private String uname;
     private String upassword;
     public static Context context;
+    private Settings settings;
+    private ChatServer server;
 
     private final static int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 36;
 
@@ -49,32 +51,36 @@ public class LoginActivity extends AppCompatActivity implements JGui{
             ActivityCompat.requestPermissions(LoginActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
         }
         context = getApplicationContext();
-        Settings  settings = new ConfigFileHandler().readSettings(JattyvFileController.J_PROP_FILE);
+        settings = new ConfigFileHandler().readSettings(JattyvFileController.J_PROP_FILE);
+    }
 
-        if(settings != null && settings.isIpAvailable() && settings.isPortAvailable()) {
-            ChatServer server = new ChatServer(settings);
-            server.start();
-            chat = new Chat(settings);
-        }else{
-            ChatServer server = new ChatServer(36987);
-            server.start();
-            chat = new Chat("127.0.0.1", 36987);
+    public void startServer(View v){
+        if(settings != null && settings.isIpAvailable() && settings.isPortAvailable()){
+             server = new ChatServer(settings);
+        }else {
+            server =new ChatServer(36987);
         }
-        chat.setGui(this);
+        server.start();
     }
 
     public void login(View v){
-        getText();
+        initC();
         chat.getHandler().getOutHandler().sendLogin(uname,upassword);
 
     }
     public void regist(View v) {
-        getText();
+        initC();
         chat.getHandler().getOutHandler().sendRegist(uname,upassword);
 
     }
 
-    public void getText(){
+    public void initC(){
+        if(settings != null && settings.isIpAvailable() && settings.isPortAvailable()) {
+            chat = new Chat(settings);
+        }else{
+            chat = new Chat("127.0.0.1", 36987);
+        }
+        chat.setGui(this);
         tUserName = (EditText) findViewById(R.id.username);
         tPassword = (EditText) findViewById(R.id.password);
         uname = tUserName.getText().toString();

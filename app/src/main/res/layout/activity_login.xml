@@ -66,6 +66,18 @@
         </LinearLayout>
     </ScrollView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sserverbtn"
+        android:onClick="startServer"
+        android:text="@string/start_server"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/floatingActionButton3"
+        android:layout_toStartOf="@+id/floatingActionButton3" />
+
     <android.support.design.widget.FloatingActionButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
