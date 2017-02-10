@@ -2,94 +2,94 @@
 <items version="2" >
 
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/libs/jcapi-0.1-SNAPSHOT.jar"
-        revision="25.0.2"
-        sha1="a994dc44e65ce09804da1261748e66f8ed69e17d">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/jcapi-0.1-SNAPSHOT-bfd1be77e48a6eaeea26851a3ea73f263cc1e978.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f3d24232c6d92fe41d698c05b13c31160e155040.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-50c95abbc5179dbe298fa90ad272a5661c772f86.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4dc7673c0f1d791b5d8848291474b4ddf1cde40e.jar" />
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-e60282efac1ab49b092f28c13b5f157790039bac.jar" />
     </item>
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-8bb85c721a90b764146c8edbbbd48c7fa5dc6bba.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ea149600f5de5ebee98a5d9fb3ef270ea01e224f.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-d133f3a4dfd1b87e22572ccdf6a7e440e6ad7c9d.jar" />
-    </item>
-    <item
-        jar="/home/ddia/Pakete/AndroidSDK/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/support-annotations-25.1.0-3be5f1f42a8be31ebf648c128131d4f4f2c9a0fc.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f65c73f5f86f0b9a19dd808fdb5c52bb2236e51f.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9ef3f628120b07e357af0505509c169d6bef542b.jar" />
-    </item>
-    <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a6f855876ce381730ac9f357b2ed1fd0468f1cb8.jar" />
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-0c88e09cd03a51f91499c13687301694fbaf4124.jar" />
     </item>
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/libs/jsapi-0.1-SNAPSHOT.jar"
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
         revision="25.0.2"
-        sha1="eb5bd0b7b8fb5385dbe9b5106709204c965b340b">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/jsapi-0.1-SNAPSHOT-415db9ab8c16e08d9f98f67c99396c556c5f01ea.jar" />
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-d97201aa6f96d7eb0160260811dd1c640db492f5.jar" />
     </item>
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jar="/home/ddia/Pakete/Android SDK/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/support-annotations-25.1.0-80d1284a7db880e6d4c4c9977c2a6ccf06394328.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-04471bed56abca08716ffdd8a9e759e43562db48.jar" />
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4fe8710ff60389f023a2ee935bc7b540fc05d1c1.jar" />
     </item>
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-803bf336088820947af079eec54bab9e21ce024f.jar" />
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-6b1b090b8d924c291be3b31432c9d28389c2e220.jar" />
     </item>
     <item
-        jar="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-0bad195c34fca0f446c24498ef9b60fddab94511.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a83de0e72350b2f29fc38aaa08a9dd7e829d998e.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-7e50af26990f1f4fd2125298efe699aad2a6031b.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-69426dd6b715b25d77340b168c02155a6a5b92fb.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        revision="25.0.2"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-d7fc941614c76e26bc97d582ab20d590739cc4e1.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9454879e6f0e4ae521f14ab7274941c62128f952.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/libs/jcapi-0.3-SNAPSHOT.jar"
+        revision="25.0.2"
+        sha1="91182c88494bf72955c72dbee6954dbabab0c2b8">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/jcapi-0.3-SNAPSHOT-dc3c9781ed03b2a1fbed3cc931396f0030e6cf02.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
         revision="25.0.2"
         sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/home/ddia/workspace/Lixja/Jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-7d51fe99e9e09e7ee229b88cd64230b4b6b62c81.jar" />
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-2bdc82cec16fb88993362f49fbb4b8e125590374.jar" />
+    </item>
+    <item
+        jar="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/home/ddia/workspace/lixja/jattyv/jattyv-android-application/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-b4fd790d869e3837b871e69060b4bba84992b9fa.jar" />
     </item>
 
 </items>

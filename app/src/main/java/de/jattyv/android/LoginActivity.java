@@ -20,7 +20,7 @@ import de.jattyv.jcapi.client.Chat;
 import de.jattyv.jcapi.client.gui.JGui;
 import de.jattyv.jcapi.data.jfc.JattyvFileController;
 import de.jattyv.jcapi.data.jfc.data.Settings;
-import de.jattyv.jsapi.ChatServer;
+import de.jattyv.jcapi.server.ChatServer;
 
 public class LoginActivity extends AppCompatActivity implements JGui{
 
@@ -92,6 +92,16 @@ public class LoginActivity extends AppCompatActivity implements JGui{
     }
 
     @Override
+    public void addFriend(String s) {
+
+    }
+
+    @Override
+    public void addGroup(String s, String s1) {
+
+    }
+
+    @Override
     public void changeWindow(String s) {
         if(s.equals(JGui.CHAT_WINDOW)){
             Intent intent = new Intent(LoginActivity.this, ChatSelectionActivity.class);
@@ -114,7 +124,17 @@ public class LoginActivity extends AppCompatActivity implements JGui{
     }
 
     @Override
+    public boolean alert(String s, String s1) {
+        return false;
+    }
+
+    @Override
     public void addMessage(String s, String s1) {
+
+    }
+
+    @Override
+    public void addGroupMessage(String s, String s1) {
 
     }
 }

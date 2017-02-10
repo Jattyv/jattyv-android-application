@@ -1,24 +1,21 @@
 package de.jattyv.android;
 
 import android.app.ListActivity;
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import de.jattyv.jcapi.client.Chat;
 import de.jattyv.jcapi.client.gui.JGui;
+import de.jattyv.jcapi.client.gui.cell.FG;
 
 public class ChatActivity extends ListActivity implements JGui{
 
-    private String fname = "";
+    private String id = "";
+    private int type = 0;
 
     private static Chat chat;
     private ArrayList<String> messages =new ArrayList<>();
@@ -29,7 +26,8 @@ public class ChatActivity extends ListActivity implements JGui{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        fname = getIntent().getExtras().getString(ChatSelectionActivity.FRIEND_NAME);
+        id = getIntent().getExtras().getString(ChatSelectionActivity.FG_ID);
+        type = getIntent().getExtras().getInt(ChatSelectionActivity.FG_TYPE);
         chat = ChatSelectionActivity.getChat();
         chat.setGui(this);
         adapter = new ArrayAdapter<String>(this,
@@ -37,14 +35,35 @@ public class ChatActivity extends ListActivity implements JGui{
                 messages);
         setListAdapter(adapter);
         inputEdit = (EditText) findViewById(R.id.input_message);
-        for(String message : chat.getHandler().getMessages(fname)){
-            addMessage(fname, message);
+        if(type == FG.FG_TYPE_FRIEND) {
+            for (String message : chat.getHandler().getMessages(id)) {
+                addMessage(id, message);
+            }
+        }else if(type == FG.FG_TYPE_GROUP){
+            for (String message : chat.getHandler().getGroupMessages(id)) {
+                addMessage(id, message);
+            }
         }
     }
 
     public void send(View view){
-        chat.getHandler().getOutHandler().sendNewMessage(fname, inputEdit.getText().toString());
-        inputEdit.setText("");
+        if(type == FG.FG_TYPE_FRIEND) {
+            chat.getHandler().getOutHandler().sendNewMessage(id, inputEdit.getText().toString());
+            inputEdit.setText("");
+        }else if(type == FG.FG_TYPE_GROUP){
+            chat.getHandler().getOutHandler().sendNewGroupMessage(id, inputEdit.getText().toString());
+            inputEdit.setText("");
+        }
+
+    }
+
+    @Override
+    public void addFriend(String s) {
+
+    }
+
+    @Override
+    public void addGroup(String s, String s1) {
 
     }
 
@@ -59,8 +78,13 @@ public class ChatActivity extends ListActivity implements JGui{
     }
 
     @Override
+    public boolean alert(String s, String s1) {
+        return false;
+    }
+
+    @Override
     public void addMessage(String fname, String message) {
-        if (this.fname.equals(fname)) {
+        if (this.id.equals(fname)) {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -71,5 +95,10 @@ public class ChatActivity extends ListActivity implements JGui{
                 });
 
         }
+    }
+
+    @Override
+    public void addGroupMessage(String s, String s1) {
+
     }
 }

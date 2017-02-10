@@ -14,5 +14,8 @@
     <string name="start_server">Start Server</string>
     <string name="savebtn">SAVE</string>
     <string name="sendbtn">-></string>
+    <string name="addfriend">Add Friend</string>
+    <string name="addgroup">Add Group</string>
+
 
 </resources>
